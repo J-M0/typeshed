@@ -1,4 +1,4 @@
-from _typeshed import Incomplete, SupportsItems, SupportsRead, Unused
+from _typeshed import Incomplete, StrOrBytesPath, SupportsItems, SupportsRead, Unused
 from collections.abc import Callable, Iterable, Mapping, MutableMapping
 from typing import Any, TypedDict
 from typing_extensions import Self, TypeAlias
@@ -79,7 +79,7 @@ _Data: TypeAlias = (
     | Mapping[Any, Any]
 )
 _Auth: TypeAlias = tuple[str, str] | _auth.AuthBase | Callable[[PreparedRequest], PreparedRequest]
-_Cert: TypeAlias = str | tuple[str, str]
+_Cert: TypeAlias = StrOrBytesPath | tuple[StrOrBytesPath, StrOrBytesPath]
 # Files is passed to requests.utils.to_key_val_list()
 _FileName: TypeAlias = str | None
 _FileContent: TypeAlias = SupportsRead[str | bytes] | str | bytes
